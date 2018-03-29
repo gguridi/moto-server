@@ -1,4 +1,4 @@
-FROM python:3.4.7-alpine
+FROM python:3.5.5-slim
 
 RUN pip install moto[server]
 RUN pip install awscli
