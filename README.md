@@ -30,6 +30,12 @@ By default the container will run in the foreground, returning the logs of what 
 
     docker run -p 4000:5000 -d gguridi/moto s3:5000
 
+It's possible also to run several services in the same docker instance.
+
+    docker run -p X:X -p Y:Y gguridi/moto s3:X ec2:Y
+
+For further information about the services moto server supports, check the [official documentation](https://github.com/spulec/moto).
+
 #### S3
 
 If we want to synchronise a local folder to have it available automatically as S3 content, we can just map an internal container folder and the scripts will take care of it.
