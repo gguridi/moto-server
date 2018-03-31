@@ -1,14 +1,6 @@
 #!/bin/sh -e
 
-MOTO_REGION=${MOTO_REGION:-us-west-1}
-MOTO_ACCESSKEY=${MOTO_ACCESSKEY:-accesskey}
-MOTO_SECRETKEY=${MOTO_SECRETKEY:-secretkey}
-
-aws configure set default.region $MOTO_REGION
-aws configure set aws_access_key_id $MOTO_ACCESSKEY
-aws configure set aws_secret_access_key $MOTO_SECRETKEY
-
-MOTO_URL="http://localhost:5000"
+MOTO_URL="http://localhost:$1"
 
 create_bucket() {
     local BUCKET=$1
